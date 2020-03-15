@@ -87,7 +87,6 @@
         
         //Stops the car and returns user back to the splashscreen
         function stop() {
-            aloneService.publishOnClose();
             var retryOrNot = false;
             messageService.disconnect(retryOrNot);
         }
