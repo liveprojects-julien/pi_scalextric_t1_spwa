@@ -1,0 +1,110 @@
+button#go-btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    
+}
+
+div#quitDiv{
+  
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+html{
+    background-color: aqua;
+    height: 100%;
+}
+
+div#slider{
+    width: 80%;
+    padding-top: 11%;
+    height: 100%;
+    padding-bottom: 50px;
+    float: left;
+    padding-left: 60%;
+  ;
+}
+
+body{
+    background-color: aqua;
+    height: 100%
+}
+
+div#carouselExampleControls{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+}
+
+nav#navTitle{
+    background-color: #007bff;
+}
+
+h1{
+    font-size: 2.4rem;
+    color: white;
+}
+
+uiview{
+    height: 100%;
+}
+
+div#lapTimes{
+  height: 50%;
+  width: 100%;
+  border:1px solid #ccc;
+  font:16px/26px Georgia, Garamond, Serif;
+  overflow:auto;
+  border-color: black;
+  background-color: #007bff;
+  border-width: 0.2px;
+  color: white;
+}
+
+div#lapContainer{
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+div#table{
+    height: 100%;
+    width: 100%;
+}
+
+div#col1{
+    height: 90%;
+    width: 40%;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+div#col2{
+    height: 90%;
+    width: 60%;
+}
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; 
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 90%;
+    padding: 0 5px;
+}
+
+div#channelDiv{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
