@@ -107,4 +107,14 @@ div#channelDiv{
     padding-top: 20px;
 }
 
+div#splash{
+    height: 100%;
+    width: 100%;
+}
+
+img#ins{
+    height: 86%;
+    width: 100%;
+}
+
 
