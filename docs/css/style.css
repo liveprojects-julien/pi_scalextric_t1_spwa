@@ -112,6 +112,7 @@ div#splash{
     width: 100%;
     border: 0;
     overflow: auto;
+    padding-top: 20px;
 }
 
 
