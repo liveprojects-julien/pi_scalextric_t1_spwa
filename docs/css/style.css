@@ -110,11 +110,23 @@ div#channelDiv{
 div#splash{
     height: 100%;
     width: 100%;
+    border: 0;
+    overflow: auto;
 }
+
+
+@media (max-width: 490px) {
+    img#ins{
+        height: 80%;
+        width: 100%;
+        border: 0;
+    }
+}
+
+
 
 img#ins{
-    height: 86%;
-    width: 100%;
+    height: 77%;
+    border: 0;
 }
-
 
