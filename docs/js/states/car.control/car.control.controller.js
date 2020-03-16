@@ -74,7 +74,7 @@
             aloneService.checkIfPlayerHasLeft();
         }
         // start interval 
-        var interval = $interval(dataTime, 5000);
+        var interval = $interval(dataTime, 10000);
 
         //set topics for mqtt on new message
         var throttleTopic = `${brokerDetails.UUID}/control/${channel}/throttle`;
@@ -167,26 +167,29 @@
 
         //start timer, used for recording lap times \/
         start();
+
         var div = document.getElementById('lapTimes');
         var sensorNum = -1;
         var sensorTopic = "";
+
         if(channel == 1){
             sensorNum = 3;
         }
         if(channel == 0){
             sensorNum = 2;
         }
-        console.log("sensors");
-        console.log(sensorNum);
+       
+       
         sensorTopic = `${brokerDetails.UUID}/sensors/${sensorNum}`
-        console.log(sensorTopic);
-        messageService.subscribe(sensorTopic,stateName, function(message){
+        
+        messageService.subscribe(sensorTopic, stateName, function(message){
             if(message.topic == sensorTopic){
                 div.innerHTML+= "<br />";
                 div.innerHTML += (value/100) + "s";
                 value = 0;
             }
         });
+
         vm.timer = timer;
         vm.start = start;
         var value = 0;
