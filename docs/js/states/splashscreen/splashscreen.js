@@ -29,14 +29,17 @@
             
             console.log(brokerDetails);
 
+            //initialise mqtt (paho shell) and message service (mqtt service shell)
             mqttService.initialize(brokerDetails.HOST, brokerDetails.PORT);
 
             messageService.initialize();
 
+            //set listeners for new message and for resubscribing too topics
             mqttService.setMessageListener(messageService.onNewMessage);
             
             mqttService.setResubscribeListener(messageService.resubscribe);
 
+            //set mqtt options using broker details passed in from url
             var mqttOptions = {};
 
             if (brokerDetails.SSL) { mqttOptions.useSSL = brokerDetails.SSL; }
@@ -47,9 +50,11 @@
                 }
             }
 
+            //connect to mqtt
             mqttService.connect(function (success, error) {
                 if (success) {
                     console.log("mqtt connect success");
+                    //initialise alone service
                     aloneService.initialize(hash);
                     $state.go('homepage');
                 } else if (error) {

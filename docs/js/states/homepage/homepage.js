@@ -17,6 +17,8 @@
         var stateName = "homepage";
         vm.stateName = stateName;
 
+
+        //map channels to drop down
         vm.channels = Array.apply(null, {
             length: 2
         }).map(Function.call, Number);

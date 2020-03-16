@@ -57,6 +57,7 @@
 
         vm.stop = stop;
  
+        //weapons listeners for enabling and disabling weapons
         aloneService.setWeaponsListener(toggleWeapons);
         function toggleWeapons(){
             vm.WEAPONS_DISABLED = false;
@@ -75,6 +76,7 @@
         // start interval 
         var interval = $interval(dataTime, 5000);
 
+        //set topics for mqtt on new message
         var throttleTopic = `${brokerDetails.UUID}/control/${channel}/throttle`;
         var getResourcesTopic = `${brokerDetails.UUID}/resources`;
         var resourceStateTopic = `${brokerDetails.UUID}/control/{channel}/{resourceId}/state`;
@@ -162,6 +164,43 @@
                 messageService.publish(throttleTopic, JSON.stringify(payload));
             }
         })
-     
+
+        //start timer, used for recording lap times \/
+        start();
+        var div = document.getElementById('lapTimes');
+        var sensorNum = -1;
+        var sensorTopic = "";
+        if(channel == 1){
+            sensorNum = 3;
+        }
+        if(channel == 0){
+            sensorNum = 2;
+        }
+        console.log("sensors");
+        console.log(sensorNum);
+        sensorTopic = `${brokerDetails.UUID}/sensors/${sensorNum}`
+        console.log(sensorTopic);
+        messageService.subscribe(sensorTopic,stateName, function(message){
+            if(message.topic == sensorTopic){
+                div.innerHTML+= "<br />";
+                div.innerHTML += (value/100) + "s";
+                value = 0;
+            }
+        });
+        vm.timer = timer;
+        vm.start = start;
+        var value = 0;
+        function start(){
+            timer();
+        }
+
+        function timer(){
+            $timeout(
+                function () {
+                    value++;
+                    timer();
+                }, 10);
+        }
+
     }
 })();

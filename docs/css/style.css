@@ -11,7 +11,9 @@ button#go-btn {
 }
 
 div#quitDiv{
-  padding-left: 6px;
+  
+  padding-top: 5px;
+  padding-left: 20px;
 }
 
 html{
@@ -19,14 +21,14 @@ html{
     height: 100%;
 }
 
-
-
 div#slider{
-    width: 100%;
-    padding-top: 20px;
-    height: 70%;
+    width: 80%;
+    padding-top: 11%;
+    height: 100%;
     padding-bottom: 50px;
-    overflow: auto;
+    float: left;
+    padding-left: 60%;
+  ;
 }
 
 body{
@@ -55,94 +57,54 @@ uiview{
     height: 100%;
 }
 
-input[type=range] {
-    -webkit-appearance: none;
-    transform: rotate(270deg);
-    width: 100%;
-    margin: 10px 0;
-    height: 100%;
-    background: aqua;
-    float: left;
-  }
-  input[type=range]:focus {
-    outline: none;
-  }
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px #222222, 0px 0px 2px #2f2f2f;
-    background: #424242;
-    border-radius: 5px;
-    border: 1px solid black;
-  }
-  input[type=range]::-webkit-slider-thumb {
-    box-shadow: 1px 1px 1px #111111, 0px 0px 1px #1e1e1e;
-    border: 1px solid black;
-    height: 30px;
-    width: 30px;
-    border-radius: 8px;
-    background:rgb(66, 66, 245);
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -11px;
-  }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #4f4f4f;
-  }
-  input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px #222222, 0px 0px 2px #2f2f2f;
-    background: #424242;
-    border-radius: 5px;
-    border: 1px solid black;
-  }
-  input[type=range]::-moz-range-thumb {
-    box-shadow: 1px 1px 1px #111111, 0px 0px 1px #1e1e1e;
-    border: 1px solid white;
-    height: 30px;
-    width: 30px;
-    border-radius: 8px;
-    background: #555bc8;
-    cursor: pointer;
-  }
-  input[type=range]::-ms-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-  }
-  input[type=range]::-ms-fill-lower {
-    background: #353535;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px #222222, 0px 0px 2px #2f2f2f;
-  }
-  input[type=range]::-ms-fill-upper {
-    background: #424242;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px #222222, 0px 0px 2px #2f2f2f;
-  }
-  input[type=range]::-ms-thumb {
-    box-shadow: 1px 1px 1px #111111, 0px 0px 1px #1e1e1e;
-    border: 1px solid white;
-    height: 30px;
-    width: 30px;
-    border-radius: 8px;
-    background: #555bc8;
-    cursor: pointer;
-    height: 10px;
-  }
-  input[type=range]:focus::-ms-fill-lower {
-    background: #424242;
-  }
-  input[type=range]:focus::-ms-fill-upper {
-    background: #4f4f4f;
-  }
+div#lapTimes{
+  height: 50%;
+  width: 100%;
+  border:1px solid #ccc;
+  font:16px/26px Georgia, Garamond, Serif;
+  overflow:auto;
+  border-color: black;
+  background-color: #007bff;
+  border-width: 0.2px;
+  color: white;
+}
 
-  
+div#lapContainer{
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+div#table{
+    height: 100%;
+    width: 100%;
+}
+
+div#col1{
+    height: 90%;
+    width: 40%;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+div#col2{
+    height: 90%;
+    width: 60%;
+}
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; 
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 90%;
+    padding: 0 5px;
+}
+
+div#channelDiv{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
