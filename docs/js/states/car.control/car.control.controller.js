@@ -34,7 +34,7 @@
         var WEAPONS_DISABLED = true;
 
         const DEFAULT_THROTTLE = 0;
-        const WEAPON_DELAY_MS = 5000;
+        const WEAPON_DELAY_MS = 20000;
     
         var slider = document.getElementById("throttle");
         
